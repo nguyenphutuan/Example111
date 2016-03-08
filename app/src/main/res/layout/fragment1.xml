@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listfrag1"
+            android:background="#00ff04"
+            android:layout_width="fill_parent"
+            android:layout_height="310dp"/>
+
+        <ListView
+            android:id="@+id/listfrag2"
+            android:layout_width="fill_parent"
+            android:layout_height="1010dp">
+
+        </ListView>
+        <ListView
+            android:background="#00ff04"
+            android:id="@+id/listfrag3"
+            android:layout_width="fill_parent"
+            android:layout_height="510dp"/>
+    </LinearLayout>
+</ScrollView>
