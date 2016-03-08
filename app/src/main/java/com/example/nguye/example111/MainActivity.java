@@ -16,8 +16,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
         setTitle(arraylistsinhvien.get(0).getTen());
         LvNav.setItemChecked(0, true);
         drawerLayout.closeDrawer(drawerPane);
-
+        //////////
         LvNav.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -78,14 +80,15 @@ public class MainActivity extends ActionBarActivity {
 //                setTitle(arraylistsinhvien.get(position).getTen());
 //                LvNav.setItemChecked(position, true);
 //                drawerLayout.closeDrawer(drawerPane);
-                Intent i=new Intent(getApplication(),Main2Activity.class);
+                Intent i = new Intent(getApplication(), Main2Activity.class);
                 Bundle bundle = new Bundle();
 
-                bundle.putString("soa",arraylistsinhvien.get(position).getTen());
-                bundle.putString("sob",arraylistsinhvien.get(position).getHinh());
-                bundle.putString("soc",arraylistsinhvien.get(position).getTuoi()+"");
+                bundle.putString("soa", arraylistsinhvien.get(position).getTen());
+                bundle.putString("sob", arraylistsinhvien.get(position).getHinh());
+                bundle.putString("soc", arraylistsinhvien.get(position).getTuoi() + "");
                 i.putExtra("data", bundle);
                 startActivity(i);
+
 
             }
         });
@@ -107,7 +110,13 @@ public class MainActivity extends ActionBarActivity {
         };
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
 
-
+        ImageView iv=(ImageView)findViewById(R.id.icon);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"heelo",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

@@ -12,7 +12,7 @@
             android:id="@+id/listfrag1"
             android:background="#00ff04"
             android:layout_width="fill_parent"
-            android:layout_height="310dp"/>
+            android:layout_height="355dp"/>
 
         <ListView
             android:id="@+id/listfrag2"
